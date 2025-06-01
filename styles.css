@@ -1,12 +1,24 @@
+/* Logo font */
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(fonts/logo_font/Nunito-VariableFont_wght.ttf);
+    font-weight: 400;
+}
+
+
+
+/* Main font */
+
 @font-face {
     font-family: 'Bai Jamjuree';
-    src: url(fonts/BaiJamjuree-Regular.ttf);
+    src: url(fonts//main_font/BaiJamjuree-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Bai Jamjuree';
-    src: url(fonts/BaiJamjuree-Bold.ttf);
+    src: url(fonts//main_font/BaiJamjuree-Bold.ttf);
     font-weight: 600;
 }
 
@@ -17,6 +29,8 @@
     padding:0;
     box-sizing: border-box;
     text-overflow: balance;
+    list-style: none;
+    text-decoration: none;
 }
 
 /* Variables area */
@@ -24,10 +38,13 @@
 :root{
     /* Colors */
     --green: hsl(171, 66%, 44%);
+    --greenDark:hsl(171, 26%, 49%);
     --blue: hsl(233, 100%, 69%);
+    --blueDark:hsl(220, 60%, 47%);
 
     --grayDark: hsl(210, 10%, 33%);
-    --grayLight: hsl(201, 11%, 66%);
+    --grayMiddle:hsl(201, 11%, 66%);
+    --grayLight: hsl(0, 0%, 97%);
 }
 
 /* Global styling area */
@@ -36,31 +53,83 @@ html{
     font-family: 'Bai Jamjuree';
     font-size: 18px;
     font-weight: 400;
+
+    text-align: center;
 }
 
 h1, h2, h3{
     font-family: 'Bai Jamjuree';
     font-weight: 600;
+
+    color: var(--grayDark);
+
+    margin-block: 1.5rem;
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: 1.7rem;
+
+    line-height: 1.8rem;
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
+
+    line-height: 1.5rem;
 }
 
 h3{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+
+    line-height: 1.3rem;
 }
 
 p{
-    font-size: 1rem;
+    font-size: 0.9rem;
+
+    line-height: 1.3rem;
+
+    color: var(--grayMiddle);
+
+    margin-block: 1rem;
 }
 
 img{
     width: 100%;
+}
+
+.main_header_logo, .main_footer_logo{
+    font-family: 'Nunito';
+
+    font-size: 10rem;
+
+    color: var(--green);
+}
+
+.buttonIOS, .buttonMac{
+    height: 3.5rem;
+    width: 100%;
+
+    border:0;
+    border-radius: 2rem;
+
+    color:  white;
+
+    font-size: 1rem;
+
+    margin-block:  0.7rem;
+}
+
+.buttonIOS{
+    background-color: var(--green);
+
+    border-bottom: 4px solid var(--greenDark);
+}
+
+.buttonMac{
+    background-color: var(--blue);
+
+    border-bottom: 4px solid var(--blueDark);
 }
 
 /* Local styling area */
@@ -70,10 +139,102 @@ img{
 }
 
 .main_section{
-    width: 80%;
+    width: 85%;
+
+    margin-inline: auto;
+
+    margin-block: 5rem;
+}
+
+.logoPart{
+    background:
+        linear-gradient(to top, white 0%, transparent 10%),
+        url(images/bg-header-mobile.png) center/cover;
+
+        padding: 2.5rem 2.5rem 0;
+}
+
+.main_header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_section:nth-of-type(1){
+    margin-top: 0;
+}
+
+.keepTrackSnippets p{
+    width: 95%;
 
     margin-inline: auto;
 }
+
+.keeptrackSnippets_container img{
+    margin-block: 1.5rem;
+}
+
+.accessClipboard img{
+    margin-block: 1.5rem;
+}
+
+.superchargeOfWorkflow_article_div{
+    margin-block: 2rem;
+}
+
+.superchargeOfWorkflow_article img{
+    width: 10%;
+}
+
+.logoesOfCompanies{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.logoesOfCompanies img{
+    width: 40%;
+
+    margin-inline: auto;
+}
+
+.main_footer{
+    background-color: var(--grayLight);
+
+    padding-top: 1.5rem;
+}
+
+.main_footer_logo{
+    font-size: 4rem;
+}
+
+.main_footer_li{
+    margin-block: 1rem;
+}
+
+.main_footer .icons{
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icos_ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+
+    width: 100%;
+}
+
+.icos_ul img{
+    width: 100%;
+}
+
+
 
 
 
