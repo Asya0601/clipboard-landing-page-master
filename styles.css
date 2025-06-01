@@ -39,8 +39,10 @@
     /* Colors */
     --green: hsl(171, 66%, 44%);
     --greenDark:hsl(171, 26%, 49%);
+    --greenActive:hsl(170, 63%, 67%);
     --blue: hsl(233, 100%, 69%);
     --blueDark:hsl(220, 60%, 47%);
+    --blueActive:hsl(233, 100%, 77%);
 
     --grayDark: hsl(210, 10%, 33%);
     --grayMiddle:hsl(201, 11%, 66%);
@@ -94,6 +96,10 @@ p{
     margin-block: 1rem;
 }
 
+a{
+    color: var(--grayDark);
+}
+
 img{
     width: 100%;
 }
@@ -107,6 +113,8 @@ img{
 }
 
 .buttonIOS, .buttonMac{
+    cursor: pointer;
+
     height: 3.5rem;
     width: 100%;
 
@@ -118,6 +126,7 @@ img{
     font-size: 1rem;
 
     margin-block:  0.7rem;
+    padding: 0.5rem 1rem;
 }
 
 .buttonIOS{
@@ -149,7 +158,7 @@ img{
 .logoPart{
     background:
         linear-gradient(to top, white 0%, transparent 10%),
-        url(images/bg-header-mobile.png) center/cover;
+        url(images/bg-header-mobile.png) top/cover;
 
         padding: 2.5rem 2.5rem 0;
 }
@@ -234,12 +243,244 @@ img{
     width: 100%;
 }
 
-
-
-
-
-
 .attribution{
     display: none;
 }
 
+
+@media(min-width:600px) and (max-width:990px){
+    
+
+    .main_section{
+        width: 55%;
+
+        margin-inline: auto;
+
+        margin-block: 5rem;
+    }
+}
+
+@media (min-width:991px){
+    /* Global styling area */
+
+    h1, h2, h3{
+        font-family: 'Bai Jamjuree';
+        font-weight: 600;
+
+        color: var(--grayDark);
+
+        margin-block: 1.5rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+
+        line-height: 2rem;
+    }
+
+    h2{
+        font-size: 2rem;
+
+        line-height: 1.8rem;
+    }
+
+    h3{
+        font-size: 1.3rem;
+
+        line-height: 1.3rem;
+    }
+
+    p{
+        font-size: 1rem;
+
+        line-height: 1.5rem;
+
+        color: var(--grayMiddle);
+
+        margin-block: 1.5rem;
+        margin-inline: auto;
+
+        width: 60%;
+    }
+
+    .buttons_area{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+
+        margin-block: 2rem;
+    }
+
+    .buttonIOS, .buttonMac{
+        height: 3.5rem;
+        width: 18%;
+
+        border:0;
+        border-radius: 2rem;
+
+        color:  white;
+
+        font-size: 1rem;
+
+        margin-block:  0.7rem;
+    }
+
+    .buttonIOS{
+        background-color: var(--green);
+
+        border-bottom: 4px solid var(--greenDark);
+    }
+
+    .buttonIOS:active{
+        background-color: var(--greenActive);
+    }
+
+    .buttonMac{
+        background-color: var(--blue);
+
+        border-bottom: 4px solid var(--blueDark);
+    }
+
+    .buttonMac:active{
+        background-color: var(--blueActive);
+    }
+
+    /* Local styling area */
+
+    .main_section{
+        margin-block: 7rem;
+    }
+
+    .logoPart{
+            background:
+                linear-gradient(to top, white 0%, transparent 10%),
+                url(images/bg-header-desktop.png) center/cover;
+
+            padding-top: 3rem;
+    }
+
+    .headerPart_p{
+        margin-inline: auto;
+    }
+
+    .keepTrackSnippets{
+        margin-inline: 0;
+
+        width: 100%;
+    }
+
+    .keepTrackSnippets p{
+        width: 55%;
+    }
+
+    .keeptrackSnippets_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        
+        text-align: start;
+
+        width: 100%;
+
+        margin: 3rem auto;
+    }
+
+    .main_p{
+        width: 60%;
+    }
+
+    .keeptrackSnippets_container p{
+        margin-inline: 0;
+
+        width: 65%;
+    }
+
+    .keepTrackSnippets_container_div{
+        margin-left: 20%;
+    }
+
+    .keeptrackSnippets_container img{
+        margin-left: -10%;
+
+        width: 115%;
+    }
+
+    .accessClipboard img{
+        width: 70%;
+
+        margin-top: 3rem;
+    }
+
+    .superchargeOfWorkflow_article{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .superchargeOfWorkflow_article p{
+        width: 80%;
+    }
+
+    .logoesOfCompanies{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+
+    .logoesOfCompanies img{
+        width: 60%;
+    }
+
+    .main_footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        padding-block: 1rem;
+    }
+
+    .main_footer>:only-child{
+        flex: 1;
+    }
+
+    .main_footer_ul{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        column-gap: 5rem;
+
+        text-align: start;
+    }
+
+    .main_footer_li{
+        margin-block: 0.5rem;
+    }
+
+    .main_footer_li:nth-of-type(1){
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .main_footer_li:nth-of-type(2){
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .main_footer_li:nth-of-type(3){
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .main_footer_li:nth-of-type(4){
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .main_footer_li:nth-of-type(5){
+        grid-row: 1;
+        grid-column: 3;
+    }  
+
+}
