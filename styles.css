@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Bai Jamjuree';
+    src: url(fonts/BaiJamjuree-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Bai Jamjuree';
+    src: url(fonts/BaiJamjuree-Bold.ttf);
+    font-weight: 600;
+}
+
+/* Reset settings */
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-overflow: balance;
+}
+
+/* Variables area */
+
+:root{
+    /* Colors */
+    --green: hsl(171, 66%, 44%);
+    --blue: hsl(233, 100%, 69%);
+
+    --grayDark: hsl(210, 10%, 33%);
+    --grayLight: hsl(201, 11%, 66%);
+}
+
+/* Global styling area */
+
+html{
+    font-family: 'Bai Jamjuree';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+h1, h2, h3{
+    font-family: 'Bai Jamjuree';
+    font-weight: 600;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+img{
+    width: 100%;
+}
+
+/* Local styling area */
+
+.main{
+    width: 100%;
+}
+
+.main_section{
+    width: 80%;
+
+    margin-inline: auto;
+}
+
+
+
+
+.attribution{
+    display: none;
+}
+
